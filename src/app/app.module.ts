@@ -10,6 +10,7 @@ import { InicioComponent } from './components/inicio/inicio.component';
 import { HeaderComponent } from './layout/header/header.component';
 import { FooterComponent } from './layout/footer/footer.component';
 import { NotFoundComponent } from './layout/not-found/not-found.component';
+import { DraftComponent } from './components/draft/draft.component';
 
 @NgModule({
   declarations: [
@@ -20,7 +21,8 @@ import { NotFoundComponent } from './layout/not-found/not-found.component';
     InicioComponent,
     HeaderComponent,
     FooterComponent,
-    NotFoundComponent
+    NotFoundComponent,
+    DraftComponent
   ],
   imports: [
     BrowserModule,

@@ -5,6 +5,7 @@ import { OrganigramaComponent } from './components/organigrama/organigrama.compo
 import { UsuariosComponent } from './components/usuarios/usuarios.component';
 import { InicioComponent } from './components/inicio/inicio.component';
 import { NotFoundComponent } from './layout/not-found/not-found.component';
+import { DraftComponent } from './components/draft/draft.component';
 
 const routes: Routes = [
   {path: '', redirectTo: 'inicio', pathMatch:'full', title: 'Principal'},
@@ -12,6 +13,7 @@ const routes: Routes = [
   {path: 'calendario', component: CalendarioComponent, title: 'Calendario'},
   {path: 'usuarios', component: UsuariosComponent, title: 'Usuarios'},
   {path: 'organigrama', component: OrganigramaComponent, title: 'Organigrama'},  
+  {path: 'draft', component: DraftComponent, title: 'Draft'},  
   {path: '**', component: NotFoundComponent, title: 'No Encontrada'}
 
 ];

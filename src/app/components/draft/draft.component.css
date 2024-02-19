@@ -1,0 +1,102 @@
+ 
+/* w: 200, h:300 */
+.menu {
+    position: relative;
+    width: 80px; 
+    height: 80px; 
+    display: flex;
+    justify-content: center;
+    align-items: center;  
+  
+  }
+  /* w:300 h:200 */
+  .menu .toggle {
+  position: relative;
+  width: 80px;
+  height: 80px;
+  border: 1px solid rgba(255, 255, 255, 0.1);
+  border-radius: 50%;
+  box-shadow: 0 25px 15px rgba(0, 0, 0, 0.25), 0 25px 20px rgba(0, 0, 0, 0.1);
+  backdrop-filter: blur(10px);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  cursor: pointer;
+  font-size: 5em;
+  color:#000;
+  z-index: 10000;
+  
+  }
+  
+  .menu .toggle i {  
+    position: absolute;
+    opacity: 0;
+    transition: 0.5s;
+  }
+  
+  /* .menu .toggle i.iconos:hover {
+    background-color: #000;
+  } */
+  .menu .toggle i:nth-child(1) {
+    opacity: 1;
+    transform: rotate(360deg);
+  }
+  .menu.active .toggle i:nth-child(1) {
+    opacity: 0;
+    transform: rotate(0deg);
+  }
+  .menu.active .toggle i:nth-child(2) {
+    opacity: 1;
+    transform: rotate(360deg);
+  }
+  .menu li {
+    position: absolute;
+    left: 0;
+    list-style: none;
+    transform-origin: 110px;
+    transition: 0.5s;
+    transition-delay: calc(0.05s * var(--i));
+    transform: rotate(calc(360deg / 4 * var(--i)));
+    scale: 0;
+    z-index: 1;
+    overflow: hidden;
+    border-radius: 40px;
+  }
+  
+  .menu li::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: -30px;
+    width: 20px;
+    height: 100%;
+    background: #fff;
+    z-index: 10;
+    transform: skewX(325deg) translateX(0);
+    box-shadow: -5px 0 0 #fff5;
+    transition: 0.5s;
+  }
+  
+  .menu li:hover::before {
+    transform: skewX(325deg) translateX(140px);
+    box-shadow: 50px 0 0 #fff5;
+  }
+  .menu.active li {
+    scale: 1;
+  }
+  .menu li a {
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 80px;
+    height: 80px;   
+    background: var(--clr);
+    color: #fff;
+    font-size: 2.25em;
+    border-radius: 50%;
+    transform: rotate(calc(360deg / -4 * var(--i)));
+    box-shadow: 0 3px 4px rgba(0, 0, 0, 0.15);
+  }
+  
+  
