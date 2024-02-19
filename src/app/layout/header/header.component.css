@@ -1,0 +1,12 @@
+nav ul a,
+nav .brand-logo {
+  color: #fff;
+}
+
+/* p {
+  line-height: 2rem;
+} */
+
+.sidenav-trigger {
+  color: #26a69a;
+}

@@ -24,10 +24,15 @@
               "src/favicon.ico",
               "src/assets"
             ],
-            "styles": [
+            "styles": [              
+              "node_modules/materialize-css/dist/css/materialize.min.css",
               "src/styles.css"
             ],
-            "scripts": []
+            "scripts": [             
+              "node_modules/jquery/dist/jquery.min.js", 
+              "node_modules/materialize-css/dist/js/materialize.min.js",
+              "src/assets/js/init.js"
+            ]
           },
           "configurations": {
             "production": {
@@ -94,5 +99,8 @@
         }
       }
     }
+  },
+  "cli": {
+    "analytics": "531a8c81-af00-428a-8e6e-e07627ee159e"
   }
 }
