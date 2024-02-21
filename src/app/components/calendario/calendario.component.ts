@@ -11,7 +11,7 @@ export class CalendarioComponent {
   constructor(private readonly router: Router){}
 
   regresar():void {
-    this.router.navigate(['/inicio']);
+    this.router.navigate(['/draft']);
   }
 
 }

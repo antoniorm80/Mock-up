@@ -11,6 +11,10 @@ import { HeaderComponent } from './layout/header/header.component';
 import { FooterComponent } from './layout/footer/footer.component';
 import { NotFoundComponent } from './layout/not-found/not-found.component';
 import { DraftComponent } from './components/draft/draft.component';
+import { LoginComponent } from './components/login/login.component';
+
+
+
 
 @NgModule({
   declarations: [
@@ -22,11 +26,12 @@ import { DraftComponent } from './components/draft/draft.component';
     HeaderComponent,
     FooterComponent,
     NotFoundComponent,
-    DraftComponent
+    DraftComponent,
+    LoginComponent,
   ],
   imports: [
     BrowserModule,
-    AppRoutingModule
+    AppRoutingModule,
   ],
   providers: [],
   bootstrap: [AppComponent]
