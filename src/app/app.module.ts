@@ -13,6 +13,8 @@ import { NotFoundComponent } from './layout/not-found/not-found.component';
 import { DraftComponent } from './components/draft/draft.component';
 import { LoginComponent } from './components/login/login.component';
 
+import { ReactiveFormsModule } from "@angular/forms";
+
 
 
 
@@ -32,6 +34,7 @@ import { LoginComponent } from './components/login/login.component';
   imports: [
     BrowserModule,
     AppRoutingModule,
+    ReactiveFormsModule
   ],
   providers: [],
   bootstrap: [AppComponent]

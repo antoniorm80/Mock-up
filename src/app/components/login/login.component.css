@@ -1,21 +1,10 @@
-* {
-    box-sizing: border-box;
-  }
-  
-  body {
-    font-family: sans-serif;
-    height: 100vh;
-    margin: 0;
-    padding: 0;
-  }
-  
 
   header {
     display: none;
   }
   
   .box {
-    background-color: #222; 
+    background-color: transparent; 
     border-radius: 10px;
     box-shadow: 0 15px 25px rgba(0, 0, 0, 0.8);
     margin: auto auto;
@@ -48,6 +37,9 @@
     outline: none;
     padding: 10px 0;
     width: 100%;
+  }
+  .box .inputBox span { 
+    color: white;
   }
   
   .box input[type="submit"], .box button[type="submit"], a.button {
@@ -90,16 +82,20 @@
     z-index: 1000;
   }
   
-  /* ---- reset ---- */
+
   .github {
     z-index: 10000;
     bottom: 10px;
     right: 10px;
     position: fixed;
     border-radius: 10px;
-    background: #fff;
+    background: transparent;
     padding: 0 12px 6px 12px;
     border: 1px solid #000;
+  }
+
+  .github:hover {
+    background: #009688 ;
   }
   
   .github a:hover,
@@ -120,4 +116,4 @@
     font-weight: bold;
     vertical-align: bottom;
   }
-  
+

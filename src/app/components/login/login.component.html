@@ -1,35 +1,77 @@
-<!-- <Particles id="tsparticles" [options]="particlesConfig">Modesot</Particles>
-<div id="tsparticles"></div> -->
 <div class="github">
-    <a class="btn btn-link" href="https://github.com/matteobruni/tsparticles" title="Find more info on GitHub">
-      <img class="img-fluid" id="gh-mark" src="https://particles.js.org/images/GitHub-Mark-120px-plus.png" alt="">
+    <a class="btn btn-flat btn-link" href="https://github.com/matteobruni/tsparticles" title="Find more info on GitHub">
+      <img class="img-fluid mt" id="gh-mark" src="https://particles.js.org/images/GitHub-Mark-120px-plus.png" alt="">
       <span id="gh-project">DiseñoS</span>
     </a>
     <div class="center-align">
       <a class="github-button" href="https://github.com/matteobruni/tsparticles" data-icon="octicon-star" aria-label="Star matteobruni/tsparticles on GitHub">BeUniqueCorp</a>      
     </div>
   </div>
-  <script async="" defer="" src="https://buttons.github.io/buttons.js"></script>
 
+<!-- 
 <main class="box">
   <h2>Login</h2>
-  <form>
+  <form [formGroup]="loginForm">
     <div class="inputBox">
-      <label for="userName">Username</label>
-      <input type="text" name="userName" id="userName" placeholder="type your username" required/>
+      <label for="userName">Correo electrónico</label>
+      <input type="text" name="email" id="email" formControlName="email" placeholder="type your username" required/>
+      <small *ngIf="email.invalid && (email.dirty || email.touched)" >
+        <div *ngIf="email.errors?.['required']" >Email is required</div>
+        <div *ngIf="email.errors?.['email']" >Email should be valid</div>        
+      </small>
     </div>
     <div class="inputBox">
       <label for="userPassword">Password</label>
-      <input type="password" name="userPassword" id="userPassword" placeholder="type your password"
+      <input type="password" name="password" id="password" formControlName="password" placeholder="type your password"
              required/>
+      <small *ngIf="password.invalid && (password.dirty || password.touched)">
+        <div *ngIf="password.errors?.['required']" >Email is required</div>            
+      </small>
     </div>
     <div>
-      <button type="submit" name="" style="float: left;">Submit</button>
-      <a class="button" [routerLink]="'/register'" style="float: left;">Register</a>
+      <button type="submit" name="">Submit</button>
+      <a class="button" [routerLink]="'/register'" >Register</a>
     </div>
   </form>
 </main>
-<footer>
-</footer>
-
-
+ -->
+<div class="container" [style]="{ width: '560px', height: '300px'}">
+  <div class="card-panel hoverable" [style]="{ padding: '50px', top: '450px'}" >  
+    <div class="row">
+      <form [formGroup]="loginForm" class="col s12" (ngSubmit)="onSubmit()">
+        <div class="row">
+          <div class="input-field col12 center-align">
+            <h4>Login</h4>
+          </div>
+        </div>   
+        <div class="row">
+          <div class="input-field col s12">
+            <input id="email" name="email" #Email type="email" class="validate" formControlName="email">
+            <label for="email">Email</label>
+            <small *ngIf="email.invalid && (email.dirty || email.touched)">
+              <div *ngIf="email.errors?.['required']">El correo electrónico es requerido.</div>
+              <div *ngIf="email.errors?.['email']" >El correo electrónico debe ser válido.</div>        
+            </small>
+          </div>
+        </div>
+        <div class="row">
+          <div class="input-field col s12">
+            <label for="password">Password</label>
+            <input id="password" name="password" type="password" formControlName="password" class="validate">            
+            <small *ngIf="password.invalid && (password.dirty || password.touched)">
+              <div *ngIf="password.errors?.['required']" >La contraseña es requerida.</div>            
+            </small>
+          </div>
+        </div>        
+        <div class="row">
+          <div class="input-field col s12">
+            <button class="btn waves-effect waves-light" type="submit" name="action" [disabled]="loginForm.invalid">Submit          
+            </button>
+          </div>
+        </div>
+      </form>
+    </div>
+    <a onclick="M.toast({html: 'I am a toast'})" class="btn">Toast!</a>
+  </div> 
+  
+</div>
