@@ -14,6 +14,7 @@ import { DraftComponent } from './components/draft/draft.component';
 import { LoginComponent } from './components/login/login.component';
 
 import { ReactiveFormsModule } from "@angular/forms";
+import { LandingComponent } from './components/landing/landing.component';
 
 
 
@@ -30,6 +31,7 @@ import { ReactiveFormsModule } from "@angular/forms";
     NotFoundComponent,
     DraftComponent,
     LoginComponent,
+    LandingComponent,
   ],
   imports: [
     BrowserModule,

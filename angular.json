@@ -30,9 +30,7 @@
             ],
             "scripts": [             
               "node_modules/jquery/dist/jquery.min.js", 
-              "node_modules/materialize-css/dist/js/materialize.min.js",                         
-              "node_modules/particles.js/particles.js",
-              "src/assets/js/script.js",
+              "node_modules/materialize-css/dist/js/materialize.min.js",                                       
               "src/assets/js/init.js"
             ]           
           },

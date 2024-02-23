@@ -8,14 +8,16 @@ import { NotFoundComponent } from './layout/not-found/not-found.component';
 import { DraftComponent } from './components/draft/draft.component';
 import { LoginComponent } from './components/login/login.component';
 import { authGuard } from './guards/auth.guard';
+import { LandingComponent } from './components/landing/landing.component';
 
 const routes: Routes = [
-  {path: '', redirectTo: 'login', pathMatch:'full', title: 'Principal'},
+  {path: '', redirectTo: 'landing', pathMatch:'full', title: 'Principal'},
   {path: 'login', component: LoginComponent, title: 'Log In'},
   {path: 'inicio', component: InicioComponent, title: 'Inicio'},
+  {path: 'landing', component: LandingComponent, title: 'Inicio'},
   {path: 'calendario', component: CalendarioComponent, title: 'Calendario'},
-  {path: 'usuarios', component: UsuariosComponent, title: 'Usuarios', canDeactivate: [authGuard]},
-  {path: 'organigrama', component: OrganigramaComponent, title: 'Organigrama', canDeactivate: [authGuard]},  
+  {path: 'usuarios', component: UsuariosComponent, title: 'Usuarios'},
+  {path: 'organigrama', component: OrganigramaComponent, title: 'Organigrama'},  
   {path: 'draft', component: DraftComponent, title: 'Draft'},  
   {path: '**', component: NotFoundComponent, title: 'No Encontrada'}
 
