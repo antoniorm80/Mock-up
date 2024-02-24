@@ -6,6 +6,41 @@ p {
     color: #26a69a;
   }
 
+  .faqs {
+    margin-top: 150px;
+    width: 50%;
+    min-width: 50vw;
+    height: 100vh;
+    min-height: 100vh;
+    color: #000;
+  }
+
+  .faqs h3 { 
+    color:#fff;
+    margin-bottom: 20px;
+  }
+
+  .collapsible {
+    border: none;
+  }
+
+  .collapsible ul {
+    border: red;
+  }
+
+  .collapsible-body {
+    color:#fff;
+    font-size: 1.2em;
+    text-align: left;
+  }
+  .faqs .card {
+    width: 500px;
+    min-width: 20vw;
+    height: 460px;
+    min-height: 30vh;  
+  }
+  
+
   .parallax-contenedor .section .container .encabezado ul {
    display: flex;
    flex-direction: row;

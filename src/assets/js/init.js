@@ -5,9 +5,14 @@
     $('.parallax').parallax();
     $('.collapsible').collapsible();
     $('.scrollspy').scrollSpy();
-    $('.carousel').carousel();
+    $('.carousel').carousel({
+      dist: -80,
+      // numVisible: 5,
+      // noWrap: false
+    });
     $('.datepicker').datepicker();
     $('.timepicker').timepicker();
+    $('.tap-target').tapTarget();
     $('input#input_text, textarea#textarea2').characterCounter();
     $('input.autocomplete').autocomplete({
       data: {

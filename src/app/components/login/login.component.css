@@ -1,5 +1,45 @@
+/* Hay que Sobre escribir un alto y ancho del contenedor */
+.container {
+  width: 100%;
+  min-width: 100vw;
+  height: 100vh;
+  min-height: 100vh;
+}
 
-  header {
+.card-panel {
+  width: 400px;
+  min-width: 20vw;
+  height: 460px;
+  min-height: 30vh;  
+}
+
+.card {
+  width: 400px;
+  min-width: 20vw;
+  height: 460px;
+  min-height: 30vh;  
+}
+
+.card-action {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  padding-top: 20px;
+  /* border-top: 1px solid lightgray; */
+}
+
+.card-action a {
+  cursor: pointer;
+}
+.input-field {
+  margin-bottom: -5px;
+}
+
+.input-field small {
+  font-size: small;
+}
+
+header {
     display: none;
   }
   
@@ -92,23 +132,26 @@
     background: transparent;
     padding: 0 12px 6px 12px;
     border: 1px solid #000;
+    color: #000;
   }
 
   .github:hover {
-    background: #009688 ;
+    background: #000 ;   
   }
   
   .github a:hover,
   .github a:link,
   .github a:visited,
   .github a:active {
-    color: #000;
+    color: #fff;
     text-decoration: none;
   }
   
   .github img {
+    margin-top: 5px;
     height: 30px;
   }
+  
   
   .github #gh-project {
     font-size: 20px;

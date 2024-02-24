@@ -92,3 +92,14 @@
         </div>
     </div>
 </div>
+<form>
+    <div class="file-field input-field">
+      <div class="btn">
+        <span>File</span>
+        <input type="file" (change)="uploadImage($event)">
+      </div>
+      <div class="file-path-wrapper">
+        <input class="file-path validate" type="text"  formControlName="file" placeholder="elegir el archivo">
+      </div>
+    </div>
+  </form>

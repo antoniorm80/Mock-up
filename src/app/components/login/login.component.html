@@ -1,42 +1,64 @@
-<div class="github">
-    <a class="btn btn-flat btn-link" href="https://github.com/matteobruni/tsparticles" title="Find more info on GitHub">
+<div class="github hide-on-small-only center-align">
+    <a class="btn btn-flat btn-link" href="#" title="Find more info on GitHub">
       <img class="img-fluid mt" id="gh-mark" src="https://particles.js.org/images/GitHub-Mark-120px-plus.png" alt="">
-      <span id="gh-project">DiseñoS</span>
+      <!-- <span id="gh-project">DiseñoS</span> -->
+      <!-- <i class="large material-icons black-text">room_service</i> -->
     </a>
     <div class="center-align">
       <a class="github-button" href="https://github.com/matteobruni/tsparticles" data-icon="octicon-star" aria-label="Star matteobruni/tsparticles on GitHub">BeUniqueCorp</a>      
     </div>
   </div>
 
-<!-- 
-<main class="box">
-  <h2>Login</h2>
-  <form [formGroup]="loginForm">
-    <div class="inputBox">
-      <label for="userName">Correo electrónico</label>
-      <input type="text" name="email" id="email" formControlName="email" placeholder="type your username" required/>
-      <small *ngIf="email.invalid && (email.dirty || email.touched)" >
-        <div *ngIf="email.errors?.['required']" >Email is required</div>
-        <div *ngIf="email.errors?.['email']" >Email should be valid</div>        
-      </small>
-    </div>
-    <div class="inputBox">
-      <label for="userPassword">Password</label>
-      <input type="password" name="password" id="password" formControlName="password" placeholder="type your password"
-             required/>
-      <small *ngIf="password.invalid && (password.dirty || password.touched)">
-        <div *ngIf="password.errors?.['required']" >Email is required</div>            
-      </small>
-    </div>
-    <div>
-      <button type="submit" name="">Submit</button>
-      <a class="button" [routerLink]="'/register'" >Register</a>
-    </div>
-  </form>
-</main>
- -->
-<div class="container" [style]="{ width: '560px', height: '300px'}">
-  <div class="card-panel hoverable" [style]="{ padding: '50px', top: '450px'}" >  
+
+<div class="container valign-wrapper"> 
+  <div class="row">
+    <div class="col s12 l6">
+      <div class="card-panel hoverable">
+        <form [formGroup]="loginForm" class="col s12" (ngSubmit)="onSubmit()">
+          <div class="card-content black-text">
+            
+            <span class="card-title center-align"><h4>LOGIN</h4>   </span>             
+            <!-- <i class="medium material-icons teal-text">lock</i>
+            <i class="medium material-icons teal-text">lock_open</i>
+            <i class="medium material-icons teal-text">lock_outline</i> -->
+            <div class="row">
+              <div class="input-field col s12">
+                <input id="email" name="email" #Email type="email" class="validate" formControlName="email">
+                <label for="email">Correo electrónico</label>
+                <small *ngIf="email.invalid && (email.dirty || email.touched)">
+                  <div *ngIf="email.errors?.['required']" class="red-text">* El correo electrónico es requerido.</div>
+                  <div *ngIf="email.errors?.['email']" class="red-text">* El correo electrónico debe ser válido.</div>        
+                </small>
+              </div>
+            </div>
+            <div class="row">
+              <div class="input-field col s12">
+                <label for="password">Contraseña</label>
+                <input id="password" name="password" type="password" formControlName="password" class="validate">            
+                <small *ngIf="password.invalid && (password.dirty || password.touched)">
+                  <div *ngIf="password.errors?.['required']" class="red-text">* La contraseña es requerida.</div>            
+                </small>
+              </div>
+            </div>   
+            <div class="row">
+              <div class="input-field col s6 right-align">
+                <button class="btn waves-effect waves-light" type="submit" name="action" [disabled]="loginForm.invalid">Submit</button>
+              </div>
+              <div class="input-field col s6">
+                <a routerLink="/landing" class="btn waves-effect waves-light">Landing</a>
+              </div>                              
+            </div>        
+          </div>
+          <div class="card-action">
+            <a onclick="M.toast({html: 'En construcción...'})">¿Olivdé mi contraseña?</a>
+            <a onclick="M.toast({html: 'Under construction...'})">Regístrarte</a>            
+          </div>          
+        </form>  
+      </div>
+    </div>   
+  </div>
+ 
+  <!-- <div class="card-panel hoverable">  
     <div class="row">
       <form [formGroup]="loginForm" class="col s12" (ngSubmit)="onSubmit()">
         <div class="row">
@@ -73,5 +95,26 @@
     </div>
     <a onclick="M.toast({html: 'I am a toast'})" class="btn">Toast!</a>
   </div> 
+
+   
+
   
+          
 </div>
+
+   <div class="publicidad">
+    <a class="waves-effect waves-light btn" onclick="$('.tap-target').tapTarget('open')">Open tap target</a>&nbsp;&nbsp;&nbsp;&nbsp;
+    <a class="waves-effect waves-light btn" onclick="$('.tap-target').tapTarget('close')">Close tap target</a>
+    <br>
+    <br>
+    <a id="menu" class="waves-effect waves-light btn btn-floating" ><i class="material-icons">menu</i></a>
+
+    <!-- Tap Target Structure -->
+    <div class="tap-target" data-target="menu">
+      <div class="tap-target-content">
+        <h5>Title</h5>
+        <p>A bunch of text</p>
+      </div>
+    </div>
+   </div>
+  -->
