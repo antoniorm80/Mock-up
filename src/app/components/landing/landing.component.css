@@ -28,10 +28,20 @@ p {
     border: red;
   }
 
+  .collapsible-header {
+    border-bottom: 1px solid #b71c1c ;
+  }
+
+  .collapsible-header:hover {
+  
+    font-size: 1.4em;
+  }
   .collapsible-body {
     color:#fff;
     font-size: 1.2em;
     text-align: left;
+    border-top: 2px solid #ffc107;
+    border-bottom: 2px solid #ffc107;
   }
   .faqs .card {
     width: 500px;
