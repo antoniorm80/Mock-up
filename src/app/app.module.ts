@@ -24,6 +24,7 @@ import { environment } from 'src/environments/environment.development';
 
 
 
+
 @NgModule({
   declarations: [
     AppComponent,
@@ -36,7 +37,7 @@ import { environment } from 'src/environments/environment.development';
     NotFoundComponent,
     DraftComponent,
     LoginComponent,
-    LandingComponent,
+    LandingComponent,    
   ],
   imports: [
     BrowserModule,

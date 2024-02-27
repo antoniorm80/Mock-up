@@ -2,22 +2,23 @@
 .container {
   width: 100%;
   min-width: 100vw;
-  height: 100vh;
+  height: 100%;
   min-height: 100vh;
 }
 
 .card-panel {
   width: 400px;
   min-width: 20vw;
-  height: 460px;
-  min-height: 30vh;  
+  height: 400px;
+  min-height: 25vh;  
+  overflow: hidden;
 }
 
 .card {
   width: 400px;
   min-width: 20vw;
-  height: 460px;
-  min-height: 30vh;  
+  height: 400px;
+  min-height: 25vh;  
 }
 
 .card-action {
