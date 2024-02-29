@@ -1,0 +1,19 @@
+| +- Login
+| +--- 1.- Agregar los iconos a los Input --> Done
+| +--- 2.- Centar el Card sin que haya overflow. --> Done|
+
+
+| +- Landing 
+| +---  FAQS
+| +---  Productos
+| +--- 
+
+| +- Calendario
+| +- Usuarios
+
+
+| +----------------- Generales ---------------------------+
+| +- Agregar la base de datos de Firebase
+| +- Agregar el Spinner
+| +- Agregar los Guard
+| +- Agregar los Interceptor
