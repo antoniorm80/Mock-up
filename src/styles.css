@@ -1,14 +1,17 @@
 /* You can add global styles to this file, and also import other style files */
 @import url('https://fonts.googleapis.com/css2?family=Poppins:200,300,400,500,600,700,800,900&display=swap');
 
-/*  DRAFT --- Activar ---- */
+* {
+  font-family: 'Poppins', sans-serif;
+} 
 
+/*  DRAFT --- Activar ---- */
 /* 
 *{
     margin: 0;
     padding: 0;
     box-sizing: border-box;
-    font-family: 'Monserrat', sans-serif;
+    font-family: 'Poppins', sans-serif;
   }
   
   body {

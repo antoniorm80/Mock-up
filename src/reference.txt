@@ -1,6 +1,7 @@
 | +- Login
 | +--- 1.- Agregar los iconos a los Input --> Done
-| +--- 2.- Centar el Card sin que haya overflow. --> Done|
+| +--- 2.- Centar el Card sin que haya overflow. --> Done 
+| +--- 3.- Modificar el sello de la marca.
 
 
 | +- Landing 
