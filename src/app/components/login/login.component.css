@@ -1,9 +1,8 @@
 /* Hay que Sobre escribir un alto y ancho del contenedor */
+
 .container {
-  width: 100%;
   min-width: 100vw;
-  height: 100%;
-  min-height: 100vh;
+  min-height: 100vh; 
 }
 
 .card-panel {
@@ -12,6 +11,7 @@
   height: 400px;
   min-height: 25vh;  
   overflow: hidden;
+
 }
 
 .card {
@@ -19,25 +19,45 @@
   min-width: 20vw;
   height: 400px;
   min-height: 25vh;  
+  border-bottom: 2px solid #03a9f4;
+}
+
+.card-title h4 {
+  margin-top: -5px;
+  margin-bottom: 40px;
 }
 
 .card-action {
   display: flex;
   flex-direction: row;
   justify-content: space-between;
-  padding-top: 20px;
-  /* border-top: 1px solid lightgray; */
+  margin-top: 45px;
+  overflow-y: hidden;
 }
 
 .card-action a {
   cursor: pointer;
 }
+
 .input-field {
+  padding: auto;
+  margin: auto;
   margin-bottom: -5px;
+}
+
+.input-field .prefix {
+  color: #e0e0e0 ;
+}
+.input-field .prefix.active {
+  color: #26a69a;
+}
+input.valid[type=email] .prefix {
+  color:brown;
 }
 
 .input-field small {
   font-size: small;
+  text-indent: 35px;
 }
 
 header {
