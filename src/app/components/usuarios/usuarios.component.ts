@@ -28,7 +28,7 @@ export class UsuariosComponent {
     const file = $event.target.files[0];
     // console.log(file);
     if (file) {
-      const path = `files/${file.name}`;
+      const path = `ìmages/${file.name}`;
       const uploadedFiles = await this.fireStorage.upload(path, file);
       console.log(uploadedFiles);
     }

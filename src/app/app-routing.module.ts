@@ -9,6 +9,8 @@ import { DraftComponent } from './components/draft/draft.component';
 import { LoginComponent } from './components/login/login.component';
 import { authGuard } from './guards/auth.guard';
 import { LandingComponent } from './components/landing/landing.component';
+import { GaleriaComponent } from './components/galeria/galeria.component';
+import { ProductosComponent } from './components/productos/productos.component';
 
 const routes: Routes = [
   {path: '', redirectTo: 'landing', pathMatch:'full', title: 'Principal'},
@@ -18,6 +20,8 @@ const routes: Routes = [
   {path: 'calendario', component: CalendarioComponent, title: 'Calendario'},
   {path: 'usuarios', component: UsuariosComponent, title: 'Usuarios'},
   {path: 'organigrama', component: OrganigramaComponent, title: 'Organigrama'},  
+  {path: 'galeria', component: GaleriaComponent, title: 'Galeria'},  
+  {path: 'productos', component: ProductosComponent, title: 'Productos'},  
   {path: 'draft', component: DraftComponent, title: 'Draft'},  
   {path: '**', component: NotFoundComponent, title: 'No Encontrada'}
 

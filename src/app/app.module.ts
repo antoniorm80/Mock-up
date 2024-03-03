@@ -2,6 +2,7 @@ import { NgModule } from '@angular/core';
 import { BrowserModule } from '@angular/platform-browser';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 
+
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 import { CalendarioComponent } from './components/calendario/calendario.component';
@@ -14,16 +15,19 @@ import { NotFoundComponent } from './layout/not-found/not-found.component';
 import { DraftComponent } from './components/draft/draft.component';
 import { LoginComponent } from './components/login/login.component';
 
+// ********** ApisExternas
+import { HTTP_INTERCEPTORS, HttpClientModule } from '@angular/common/http';
 import { ReactiveFormsModule } from "@angular/forms";
 import { LandingComponent } from './components/landing/landing.component';
-
+// firebase with Provider
+import { provideStorage, getStorage } from "@angular/fire/storage";
 // firebase
 import { AngularFireModule  } from "@angular/fire/compat";
 import { AngularFireStorageModule } from "@angular/fire/compat/storage";
 import { environment } from 'src/environments/environment.development';
-
-
-
+import { ProductosComponent } from './components/productos/productos.component';
+import { GaleriaComponent } from './components/galeria/galeria.component';
+import { initializeApp, provideFirebaseApp } from '@angular/fire/app';
 
 @NgModule({
   declarations: [
@@ -37,12 +41,17 @@ import { environment } from 'src/environments/environment.development';
     NotFoundComponent,
     DraftComponent,
     LoginComponent,
-    LandingComponent,    
+    LandingComponent,
+    ProductosComponent,
+    GaleriaComponent,    
   ],
   imports: [
     BrowserModule,
     AppRoutingModule,
+    HttpClientModule,
     ReactiveFormsModule,
+    provideFirebaseApp(( )=> initializeApp(environment.firebaseConfig)),
+    provideStorage(() => getStorage()),
     AngularFireModule.initializeApp(environment.firebaseConfig),
     AngularFireStorageModule
 

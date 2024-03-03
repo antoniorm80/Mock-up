@@ -1,11 +1,10 @@
 export const environment = {
     firebaseConfig:  {
-        apiKey: "AIzaSyC7bBKvKwOAq3fQYuvarAjQMU4ukTOAO_Y",
-        authDomain: "kndis-dc1d7.firebaseapp.com",
-        projectId: "kndis-dc1d7",
-        storageBucket: "kndis-dc1d7.appspot.com",
-        messagingSenderId: "182224629733",
-        appId: "1:182224629733:web:34dd5a5204917f13e7c90c"
+        apiKey: "AIzaSyBg5zLuy8Tm5Y2VYcmGYiWiMMLTQB-Z560",
+        authDomain: "mock-up-989d4.firebaseapp.com",
+        projectId: "mock-up-989d4",
+        storageBucket: "mock-up-989d4.appspot.com",
+        messagingSenderId: "818729285355",
+        appId: "1:818729285355:web:efe7a15fe27f64f38230ae"
     }
-
 };

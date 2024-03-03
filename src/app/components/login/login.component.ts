@@ -17,8 +17,8 @@ export class LoginComponent implements OnInit, AfterViewInit{
   constructor(private router: Router,  private fb:FormBuilder){
 
     this.loginForm = this.fb.group({
-      email: ['', [Validators.required, Validators.email]],
-      password: ['', Validators.required],
+      email: ['antoniorm80@hotmail.com', [Validators.required, Validators.email]],
+      password: ['tester', Validators.required],
     });
   }
   ngAfterViewInit(): void {

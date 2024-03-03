@@ -1,5 +1,8 @@
 {
   "projects": {
-    "default": "kndis-dc1d7"
-  }
+    "default": "mock-up-989d4",
+    "mock-up": "mock-up-989d4"
+  },
+  "targets": {},
+  "etags": {}
 }

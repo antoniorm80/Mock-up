@@ -11,6 +11,25 @@
 
 | +- Calendario
 | +- Usuarios
+| +- Galeria
+| +- Productos
+
+
+| +----------------- Firebase ---------------------------+
+| +- Agregar la Autenticación con firebase. 
+| +- Agregar el Storage para subir imágenes.
+| +- Agregar el proyecto al Hosting de firebase..
+| +- Agregar el CRUD con firebase..
+
+
+
+| +----------------- Funcionalidad ---------------------------+
+| +- Replicar la Carga de Imágenes --> Done
+        1.- limpiar el Input 
+        2.- Organizar las imágenes.
+| +- Replicar la Tienda Online sin Hosting --> Done
+| +- Replicar la CRUD
+| +- Replicar la Autenticación
 
 
 | +----------------- Generales ---------------------------+

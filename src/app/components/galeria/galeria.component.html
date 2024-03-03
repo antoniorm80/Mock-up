@@ -1,0 +1,29 @@
+
+<div class="container" style="height: 100vh; margin-top: 30px;">
+    <div class="row center-align">
+        <div class="col m7 l6 offset-l3">
+            <p>Carga de Imágenes</p>
+            <form>
+                <div class="file-field input-field">
+                  <div class="btn">
+                    <span>File</span>
+                    <input type="file" (change)="uploadImage($event)">
+                  </div>
+                  <div class="file-path-wrapper">
+                    <input class="file-path validate" type="text"  formControlName="file" placeholder="elegir el archivo">
+                  </div>
+                </div>
+              </form>
+        </div>
+    </div>
+    <div class="row center-align">
+        <div class="col l12">
+            <p>Galeria de Fotos </p>
+        </div>
+        <div class="col l12" >
+            <div class="images">
+              <img [src]="image" *ngFor="let image of images"  alt="imagen" width="200px">
+            </div>
+        </div>
+    </div>
+</div>
