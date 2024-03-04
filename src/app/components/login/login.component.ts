@@ -39,8 +39,6 @@ export class LoginComponent implements OnInit, AfterViewInit{
   }
 
   onSubmit(): void {
-    console.log("estupida");
-    
     this.router.navigate(['/inicio']);
   }
 

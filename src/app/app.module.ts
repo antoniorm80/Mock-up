@@ -15,6 +15,9 @@ import { NotFoundComponent } from './layout/not-found/not-found.component';
 import { DraftComponent } from './components/draft/draft.component';
 import { LoginComponent } from './components/login/login.component';
 
+// ********** Spinner
+import { NgxSpinnerModule } from "ngx-spinner";
+
 // ********** ApisExternas
 import { HTTP_INTERCEPTORS, HttpClientModule } from '@angular/common/http';
 import { ReactiveFormsModule } from "@angular/forms";
@@ -28,6 +31,7 @@ import { environment } from 'src/environments/environment.development';
 import { ProductosComponent } from './components/productos/productos.component';
 import { GaleriaComponent } from './components/galeria/galeria.component';
 import { initializeApp, provideFirebaseApp } from '@angular/fire/app';
+import { SpinnerInterceptor } from './interceptors/spinner.interceptor';
 
 @NgModule({
   declarations: [
@@ -48,15 +52,22 @@ import { initializeApp, provideFirebaseApp } from '@angular/fire/app';
   imports: [
     BrowserModule,
     AppRoutingModule,
+    BrowserAnimationsModule,
     HttpClientModule,
     ReactiveFormsModule,
     provideFirebaseApp(( )=> initializeApp(environment.firebaseConfig)),
     provideStorage(() => getStorage()),
     AngularFireModule.initializeApp(environment.firebaseConfig),
-    AngularFireStorageModule
+    AngularFireStorageModule,
+    NgxSpinnerModule
 
   ],
-  providers: [],
+  exports: [
+    NgxSpinnerModule
+  ],
+  providers: [
+    { provide: HTTP_INTERCEPTORS, useClass: SpinnerInterceptor, multi: true}
+  ],
   bootstrap: [AppComponent]
 })
 export class AppModule { }
