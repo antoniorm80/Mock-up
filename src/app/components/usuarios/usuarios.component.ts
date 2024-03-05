@@ -1,7 +1,8 @@
-import { AfterViewInit, Component, ElementRef, ViewChild } from '@angular/core';
+import { AfterViewInit, Component, ElementRef, OnInit, ViewChild } from '@angular/core';
 import { AngularFireStorage } from '@angular/fire/compat/storage';
 // import { Storage, ref, uploadBytes} from '@angular/fire/storage';
 import { FormBuilder, FormGroup, Validators } from '@angular/forms';
+import Usuarios from 'src/app/interfaces/usuarios';
 import { UsuariosService } from 'src/app/services/usuarios.service';
 
 
@@ -10,10 +11,11 @@ import { UsuariosService } from 'src/app/services/usuarios.service';
   templateUrl: './usuarios.component.html',
   styleUrls: ['./usuarios.component.css']
 })
-export class UsuariosComponent implements AfterViewInit{
+export class UsuariosComponent implements OnInit, AfterViewInit{
   formSubirArchivo!: FormGroup;
   formUsuario!: FormGroup;
-  @ViewChild('name') inputName?: ElementRef;
+  usuarios!: Usuarios[];
+;  @ViewChild('name') inputName?: ElementRef;
 
   constructor( private fb: FormBuilder,
     private fireStorage: AngularFireStorage,
@@ -33,24 +35,35 @@ export class UsuariosComponent implements AfterViewInit{
       description: ["", Validators.required]
     })
   }
+  ngOnInit(): void {
+    this.usuarioService.getusuarios().subscribe(usuarios => {
+      // console.log(usuarios);
+      this.usuarios = usuarios;
+    })
+  }
+
   ngAfterViewInit(): void {
     this.inputName?.nativeElement.focus();
   }
  
 
   async onSubmit () {
-    console.log(this.formUsuario.value)
+    // console.log(this.formUsuario.value)
     const response = await this.usuarioService.addUsuario(this.formUsuario  .value);
-    console.log(response);
+    // console.log(response);
     this.limpiarFormulario();
     this.inputName?.nativeElement.focus();
   }
 
   limpiarFormulario() :void {
     this.formUsuario.reset();
-
   }
   
+  async onClickDelete(usuario: Usuarios) {
+    const response = await this.usuarioService.deleteUsuario(usuario);
+    // Agregar un Alerta para confirmar que se quiere eliminar el registro. 
+    // console.log(response);
+  }
   // onUpload($event: any) {
   //   console.log($event);
   // }

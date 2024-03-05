@@ -58,7 +58,35 @@
                 </form>
         </div>
         <div class="col s6">
-            <table>
+           
+            <div class="places">
+                <div class="place" *ngFor="let usuario of usuarios">
+                     <div class="image" [ngStyle]="{ backgroundImage: 'url(assets/img/pic.png)' }"></div>
+                    <div class="info">
+                        <h5>{{usuario.name}} {{usuario.lastname}} </h5>
+                        <p>{{usuario.description}}</p>
+                        <p> <span><b>Básicos:</b></span> {{usuario.phone}} / {{usuario.email}}</p>
+                        <button class="btn btn-small waves-effect red" (click)="onClickDelete(usuario)">Borrar</button>
+                    </div>
+                </div>
+            </div>     
+        </div>
+    </div>
+</div>
+<!-- <form>
+    <div class="file-field input-field">
+      <div class="btn">
+        <span>File</span>
+        <input type="file" (change)="uploadImage($event)">
+      </div>
+      <div class="file-path-wrapper">
+        <input class="file-path validate" type="text"  formControlName="file" placeholder="elegir el archivo">
+      </div>
+    </div>
+  </form> -->
+
+  <!-- 
+     <table>
                 <thead>
                     <tr>
                         <th>Name</th>
@@ -112,18 +140,5 @@
                         <li class="waves-effect"><a href="#!"><i class="material-icons">chevron_right</i></a></li>
                     </ul>
                 </div>
-            </div>     
-        </div>
-    </div>
-</div>
-<!-- <form>
-    <div class="file-field input-field">
-      <div class="btn">
-        <span>File</span>
-        <input type="file" (change)="uploadImage($event)">
-      </div>
-      <div class="file-path-wrapper">
-        <input class="file-path validate" type="text"  formControlName="file" placeholder="elegir el archivo">
-      </div>
-    </div>
-  </form> -->
+            </div>
+   -->
