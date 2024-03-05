@@ -22,7 +22,10 @@ import { NgxSpinnerModule } from "ngx-spinner";
 import { HTTP_INTERCEPTORS, HttpClientModule } from '@angular/common/http';
 import { ReactiveFormsModule } from "@angular/forms";
 import { LandingComponent } from './components/landing/landing.component';
-// firebase with Provider
+
+// firebase with Provider for Storage
+import { provideFirestore, getFirestore } from '@angular/fire/firestore';
+// firebase with Provider for Storage
 import { provideStorage, getStorage } from "@angular/fire/storage";
 // firebase
 import { AngularFireModule  } from "@angular/fire/compat";
@@ -57,6 +60,7 @@ import { SpinnerInterceptor } from './interceptors/spinner.interceptor';
     ReactiveFormsModule,
     provideFirebaseApp(( )=> initializeApp(environment.firebaseConfig)),
     provideStorage(() => getStorage()),
+    provideFirestore(() => getFirestore()),
     AngularFireModule.initializeApp(environment.firebaseConfig),
     AngularFireStorageModule,
     NgxSpinnerModule

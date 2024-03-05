@@ -14,6 +14,7 @@
     $('.timepicker').timepicker();
     $('.tap-target').tapTarget();
     $('input#input_text, textarea#textarea2').characterCounter();
+    $('textarea#description').characterCounter();
     $('input.autocomplete').autocomplete({
       data: {
         "Apple": null,

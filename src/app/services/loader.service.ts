@@ -13,7 +13,7 @@ export class LoaderService {
   busy() {
     this.busyRequestCount++;
     this.spinnerService.show(undefined, {
-      type: 'timer',
+      type: 'fire',
       bdColor: 'rgba(0,0,0,0.8)',
       color: '#fff'
     });        
