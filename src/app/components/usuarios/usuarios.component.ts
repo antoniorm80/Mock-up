@@ -1,4 +1,4 @@
-import { Component, ElementRef, ViewChild } from '@angular/core';
+import { AfterViewInit, Component, ElementRef, ViewChild } from '@angular/core';
 import { AngularFireStorage } from '@angular/fire/compat/storage';
 // import { Storage, ref, uploadBytes} from '@angular/fire/storage';
 import { FormBuilder, FormGroup, Validators } from '@angular/forms';
@@ -10,7 +10,7 @@ import { UsuariosService } from 'src/app/services/usuarios.service';
   templateUrl: './usuarios.component.html',
   styleUrls: ['./usuarios.component.css']
 })
-export class UsuariosComponent {
+export class UsuariosComponent implements AfterViewInit{
   formSubirArchivo!: FormGroup;
   formUsuario!: FormGroup;
   @ViewChild('name') inputName?: ElementRef;
@@ -33,6 +33,10 @@ export class UsuariosComponent {
       description: ["", Validators.required]
     })
   }
+  ngAfterViewInit(): void {
+    this.inputName?.nativeElement.focus();
+  }
+ 
 
   async onSubmit () {
     console.log(this.formUsuario.value)

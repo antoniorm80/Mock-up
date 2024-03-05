@@ -23,7 +23,7 @@ export class LoginComponent implements OnInit, AfterViewInit{
   }
   ngAfterViewInit(): void {
     // Enviar el focus *** descomentar
-     this.inputEmail.nativeElement.focus();    
+     this.inputEmail.nativeElement.focus();      
   }
 
   ngOnInit(): void {
