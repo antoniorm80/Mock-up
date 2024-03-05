@@ -3,7 +3,9 @@
 | +--- 2.- Centar el Card sin que haya overflow. --> Done 
 | +--- 3.- Cambiar el sello de la marca.
 | +--- 4.- Corregir el focus de los Inputs - label agregue class active --> Done
-| +--- 5.- Modificar los colors de acuerdo a las SCSS - Colors --> 
+| +--- 5.- Modificar los colors de acuerdo a las SCSS - Colors -->
+| +--- 6.-  -->
+
 
 
 
